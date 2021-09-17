@@ -1,0 +1,4 @@
+fastapi==0.68.1
+ipwhois==1.2.0
+python-whois==0.7.3
+dnspython==2.0.0
