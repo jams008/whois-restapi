@@ -10,4 +10,6 @@ RUN addgroup user && adduser -s /bin/sh user -G user
 USER user
 RUN mkdir -p /home/user/.local/bin && pip install -r requirements.txt
 
-CMD [ "uvicorn", "main:app", "--host=0.0.0.0", "--port=${PORT:-5000}" ]
+EXPOSE 5000
+
+CMD ["/home/user/.local/bin/uvicorn", "main:app", "--host=0.0.0.0", "--port=5000"]
