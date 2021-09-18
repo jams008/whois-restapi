@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY ./* /app/
 
-RUN addgroup user && adduser -s /bin/sh user -G user
+RUN addgroup user && adduser -s /bin/sh -D user -G user
 USER user
 RUN mkdir -p /home/user/.local/bin && pip install -r requirements.txt
 
